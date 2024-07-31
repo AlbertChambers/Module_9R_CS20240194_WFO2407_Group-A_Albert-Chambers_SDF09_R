@@ -23,4 +23,4 @@ if (sum <= 20) {
 };
 
 // cash out
-console.log(hasBlackjack);
+console.log(message);
