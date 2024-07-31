@@ -1,13 +1,34 @@
-/* Complete the CSS styling according to the provided design */
-
 body {
-    
+    background-image: url(./images/Blackjack-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 4rem;
+    color: whitesmoke;
 }
 
 h1 {
     color: goldenrod;
+    font-size: 8rem;
+}
+
+button {
+    font-weight: bold;
+    color: #016f32;
+    width: 9.5rem;
+    border-radius: 0.5rem;
+    background-color: goldenrod;
+    border: none;
+    padding: 0.5rem 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    -moz-border-radius: 0.5rem;
+    -ms-border-radius: 0.5rem;
+    -o-border-radius: 0.5rem;
+    z-index: 1;
 }
 
 #message-el {
-    
+    font-style: italic;
 }
