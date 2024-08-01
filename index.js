@@ -1,46 +1,46 @@
-let cards = []
-let sum = 0
-let hasBlackJack = false;
-let isAlive = false;
-let message = "";
-let messageEl = document.getElementById("message-el");
-let sumEl = document.getElementById("sum-el");
-let cardsEl = document.getElementById("cards-el");
-
 let player = {
-    name: "Albert",
-    chips: 150
+    name: "Per",
+    chips: 200
 }
 
+let cards = []
+let sum = 0
+let hasBlackJack = false
+let isAlive = false
+let message = ""
+let messageEl = document.getElementById("message-el")
+let sumEl = document.getElementById("sum-el")
+let cardsEl = document.getElementById("cards-el")
 let playerEl = document.getElementById("player-el")
 
 playerEl.textContent = player.name + ": $" + player.chips
 
 function getRandomCard() {
-    let randomNum = Math.ceil( Math.random()*13 )
-     if (randomNum > 10) {
+    let randomNumber = Math.ceil( Math.random()*13 )
+    if (randomNumber > 10) {
         return 10
-    } else if (randomNum === 1) {
+    } else if (randomNumber === 1) {
         return 11
     } else {
-        return randomNum
+        return randomNumber
     }
 }
 
 function startGame() {
-    let isAlive = true;
+    isAlive = true
     let firstCard = getRandomCard()
     let secondCard = getRandomCard()
-    let cards = [firstCard, secondCard]
-    let sum = firstCard + secondCard
+    cards = [firstCard, secondCard]
+    sum = firstCard + secondCard
     renderGame()
-};
+}
 
 function renderGame() {
     cardsEl.textContent = "Cards: "
     for (let i = 0; i < cards.length; i++) {
         cardsEl.textContent += cards[i] + " "
     }
+
     sumEl.textContent = "Sum: " + sum
     if (sum <= 20) {
         message = "Do you want to draw a new card?"
@@ -52,13 +52,14 @@ function renderGame() {
         isAlive = false
     }
     messageEl.textContent = message
-};
+}
+
 
 function newCard() {
-    if (hasBlackJack === false && isAlive === true) {
+    if (isAlive === true && hasBlackJack === false) {
         let card = getRandomCard()
         sum += card
         cards.push(card)
         renderGame()
     }
-};
+}
