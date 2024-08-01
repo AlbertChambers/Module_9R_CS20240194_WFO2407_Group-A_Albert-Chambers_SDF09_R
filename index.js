@@ -7,6 +7,15 @@ let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 let cardsEl = document.getElementById("cards-el");
 
+let player = {
+    name: "Albert",
+    chips: 150
+}
+
+let playerEl = document.getElementById("player-el")
+
+playerEl.textContent = player.name + ": $" + player.chips
+
 function getRandomCard() {
     let randomNum = Math.ceil( Math.random()*13 )
      if (randomNum > 10) {
