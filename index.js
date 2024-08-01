@@ -10,6 +10,10 @@ let cardsEl = document.getElementById("cards-el");
 
 let cards = [firstCard, secondCard];
 
+function getRandomCard() {
+    return 5
+}
+
 function startGame() {
     renderGame()
 };
